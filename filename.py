@@ -77,11 +77,15 @@ def play_game():
         all_revealed = True
         for i in range(rows):
             for j in range(cols):
-                if board[i][j] != 'B' and not revealed[i][j]:
+                 if board[i][j] != 'B' and not revealed[i][j]:
                     all_revealed = False
                     break
             if not all_revealed:
                 break
 
         if all_revealed:
-            print
+            print('Вы выиграли!')
+            print_board(board)
+            break
+
+play_game()
